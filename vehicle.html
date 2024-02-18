@@ -83,24 +83,24 @@
         </tr>
       </table>
     </section>
-
-    <!-- サブコンテンツグループ -->
-    <div class="sub-content">
-      <button id="showPdfButton">
-        解説PDFを表示
-      </button>
-      <div id="pdfViewer" style="display:none;">
-        <iframe width="100%" height="700px" src="pdf/vehicle_info_page.pdf"></iframe>
-      </div>
-      <script>
-        document.getElementById('showPdfButton').addEventListener('click', function () {
-          let pdfViewer = document.getElementById('pdfViewer');
-          pdfViewer.style.display = "block";
-        });
-      </script>
-    </div>
-
   </div>
+
+  <!-- サブコンテンツグループ -->
+  <div class="sub-content">
+    <button id="showPdfButton">
+      解説PDFを表示
+    </button>
+    <div id="pdfViewer" style="display:none;">
+      <iframe width="100%" height="700px" src="pdf/vehicle_info_page.pdf"></iframe>
+    </div>
+    <script>
+      document.getElementById('showPdfButton').addEventListener('click', function () {
+        let pdfViewer = document.getElementById('pdfViewer');
+        pdfViewer.style.display = "block";
+      });
+    </script>
+  </div>
+
 </body>
 
 </html>
