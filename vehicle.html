@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>業務マニュアル</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="vehicleInfo.js"></script>
+</head>
+
+<body>
+  <header class="Not-index">
+    <p><a href="index.html">設計支援WEBサイト</a></p>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="manual.html">業務マニュアル</a>
+      <a href="vehicle.html">車両情報</a>
+      <a href="design.html">設計計算</a>
+      <a href="parts.html">ブレーキ部品</a>
+    </nav>
+  </header>
+  <!-- メインコンテンツグループ -->
+  <div class="main-content">
+    <h1>車両情報</h1>
+    <p>このページでは、車両に関する情報を提供しています。</p>
+    <!-- 車両情報セクション -->
+    <section class="vehicle-info">
+      <h2>1. 車両の詳細情報</h2>
+      <p>車両をクリックすると、車両諸元が下の表に表示されます。</p>
+
+      <div class="vehicle-images">
+        <script>
+          // const vehicles = [vehicle1, vehicle2, vehicle3, vehicle4, vehicle5, vehicle6]; vehicleInfoで定義
+          // 車両の配列をループして、各車両の情報を表示
+          for (let i = 0; i < vehicles.length; i++) {
+            const vehicle = vehicles[i];
+
+            // 車両のコンテナを作成し、スタイルを設定
+            const vehicleContainer = document.createElement('div');
+            vehicleContainer.className = "vehicle-container";
+
+            // 車両の画像を設定
+            const vehicleImage = document.createElement('img');
+            vehicleImage.src = `images/${vehicle.name}.jpg`;
+            vehicleImage.alt = vehicle.name;
+            vehicleImage.className = "vehicle-image";
+
+            // コンテナに画像を追加し、車両画像のdivにコンテナを追加
+            vehicleContainer.appendChild(vehicleImage);
+            document.querySelector('.vehicle-images').appendChild(vehicleContainer);
+
+            // 画像をクリックしたときの処理を設定
+            vehicleImage.addEventListener('click', function () {
+              // クリックされた車両の情報を表に追加
+              const row = vehicleTable.insertRow();
+              row.innerHTML =
+                `<tr>
+              <td>${vehicle.name}</td>
+              <td>${vehicle.emptyWeight}</td>
+              <td>${vehicle.GVM}</td>
+              <td>${vehicle.frontAxleWeight}</td>
+              <td>${vehicle.rearAxleWeight}</td>
+              <td>${vehicle.centerOfGravityHeight}</td>
+              <td>${vehicle.wheelBase}</td>
+              <td>${vehicle.tireDynamicLoadRadius}</td>
+            </tr>`;
+            });
+          };
+        </script>
+      </div>
+
+      <table id="vehicleTable">
+        <tr>
+          <th>車両名</th>
+          <th>空車重量[kg]</th>
+          <th>GVM[kg]</th>
+          <th>Fr軸重[kg]</th>
+          <th>Rr軸重[kg]</th>
+          <th>重心高[mm]</th>
+          <th>ホイールベース[mm]</th>
+          <th>タイヤ動荷重半径[mm]</th>
+        </tr>
+      </table>
+    </section>
+
+    <!-- サブコンテンツグループ -->
+    <div class="sub-content">
+      <button id="showPdfButton">
+        解説PDFを表示
+      </button>
+      <div id="pdfViewer" style="display:none;">
+        <iframe width="100%" height="700px" src="pdf/vehicle_info_page.pdf"></iframe>
+      </div>
+      <script>
+        document.getElementById('showPdfButton').addEventListener('click', function () {
+          let pdfViewer = document.getElementById('pdfViewer');
+          pdfViewer.style.display = "block";
+        });
+      </script>
+    </div>
+
+  </div>
+</body>
+
+</html>
