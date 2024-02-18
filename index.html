@@ -2,58 +2,64 @@
 <html lang="ja">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>トップページ</title>
-	<link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トップページ</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<header>
-		<h1>
-			設計支援WEBサイト
-		</h1>
-	</header>
-	<nav>
-		<a href="index.html">ホーム</a>
-		<a href="manual.html">業務マニュアル</a>
-		<a href="vehicle.html">車両情報</a>
-		<a href="design.html">設計計算</a>
-		<a href="design.html">ブレーキ部品</a>
-	</nav>
-	<div class="main-content">
-		<p>こちらは、ブレーキ設計に関する情報を提供するウェブサイトです。各ページの概要はサムネイルリンクをご覧ください。</p>
-		<div class="thumbnail-links">
-			<div class="row">
-				<div class="column">
-					<p>業務マニュアル</p>
-					<a href="manual.html">
-						<img src="../images/Links.png" alt="業務マニュアル">
-					</a>
-				</div>
-				<div class="column">
-					<p>車両情報</p>
-					<a href="vehicle.html">
-						<img src="../images/Links2.png" alt="車両情報">
-					</a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column">
-					<p>設計計算</p>
-					<a href="design.html">
-						<img src="../images/Links4.png" alt="設計計算">
-					</a>
-				</div>
-				<div class="column">
-					<p>ブレーキ部品</p>
-					<a href="archives.html">
-						<img src="../images/Links3.png" alt="ブレーキ部品">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <!-- ヘッダー -->
+  <header>
+    <h1>
+      設計支援WEBサイト
+    </h1>
+  </header>
+  <!-- ナビゲーションメニュー -->
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="manual.html">業務マニュアル</a>
+    <a href="vehicle.html">車両情報</a>
+    <a href="design.html">設計計算</a>
+    <a href="parts.html">ブレーキ部品</a>
+  </nav>
+  <!-- メインコンテンツグループ -->
+  <div class="main-content">
+    <p>このサイトは、ブレーキ設計に関する情報を提供するウェブサイトです。各ページの概要はサムネイルリンクを参照ください。</p>
+    <!-- メニューセクション -->
+    <section class="index-menu">
+      <div class="content-links">
+        <div class="row">
+          <div class="column">
+            <p>業務マニュアル</p>
+            <a href="manual.html">
+              <img src="images/Links.png" alt="業務マニュアル">
+            </a>
+          </div>
+          <div class="column">
+            <p>車両情報</p>
+            <a href="vehicle.html">
+              <img src="images/Links2.png" alt="車両情報">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <p>設計計算</p>
+            <a href="design.html">
+              <img src="images/Links4.png" alt="設計計算">
+            </a>
+          </div>
+          <div class="column">
+            <p>ブレーキ部品</p>
+            <a href="parts.html">
+              <img src="images/Links3.png" alt="ブレーキ部品">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 
 </html>
