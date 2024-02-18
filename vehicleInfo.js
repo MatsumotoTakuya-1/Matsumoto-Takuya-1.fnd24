@@ -1,5 +1,5 @@
 let vehicle1 = {
-  name: "ハイエースワゴン",
+  name: "ハイエースワゴン",
   emptyWeight: "2040",
   GVM: "2590",
   centerOfGravityHeight: "800",//仮値
