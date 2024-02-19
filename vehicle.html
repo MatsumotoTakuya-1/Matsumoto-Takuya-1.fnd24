@@ -90,10 +90,10 @@
     <button id="showPdfButton">
       解説PDFを表示
     </button>
-
-    <div id="pdfViewer" style="display:none; position: relative; padding-bottom: 56.25%; height: 0;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="pdf/vehicle_info_page.pdf"></iframe>
+    <div id="pdfViewer" style="display:none; real">
+      <iframe width="100%" height="700px" src="pdf/vehicle_info_page.pdf"></iframe>
     </div>
+
     <script>
       document.getElementById('showPdfButton').addEventListener('click', function () {
         let pdfViewer = document.getElementById('pdfViewer');
